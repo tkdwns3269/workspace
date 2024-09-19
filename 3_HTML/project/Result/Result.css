@@ -76,10 +76,6 @@ body {
 }
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 0f90496e8d8fd2142bc1aab7ee826ccd0aa004ec
 .buttons>button{
     margin-bottom: 20px;
     background-color: #dcfa72;
@@ -89,21 +85,13 @@ body {
     background-color: #1eff00;
 }
 
-<<<<<<< HEAD
 .bottom-buttons>button{
     background-color: #ffc578;
-=======
-.button{
-    background-color: #ffc578;
-=======
-.buttons {
->>>>>>> 0f90496e8d8fd2142bc1aab7ee826ccd0aa004ec
     margin-bottom: 20px;
 }
 
 .button{
     background-color: #f0a94a;
->>>>>>> 4bded043d9640ea8bea64dc250ea795f5e49a553
     color: black;
     padding: 10px 20px;
     margin: 10px;
@@ -114,28 +102,13 @@ body {
 }
 
 .button:hover {
-<<<<<<< HEAD
     background-color: #ff9100;
-=======
-<<<<<<< HEAD
-    background-color: #ff9100;
-=======
-    background-color: #ffa726;
->>>>>>> 4bded043d9640ea8bea64dc250ea795f5e49a553
->>>>>>> 0f90496e8d8fd2142bc1aab7ee826ccd0aa004ec
 }
 
 .bottom-buttons {
     margin-top: 20px;
-<<<<<<< HEAD
     
 
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 4bded043d9640ea8bea64dc250ea795f5e49a553
->>>>>>> 0f90496e8d8fd2142bc1aab7ee826ccd0aa004ec
 }
 
 .report-btn {
@@ -149,14 +122,5 @@ body {
 }
 
 .report-btn:hover {
-<<<<<<< HEAD
     background-color: #ff1414 !important;
 }
-=======
-<<<<<<< HEAD
-    background-color: #ff1414;
-=======
-    background-color: #ff4d4d;
->>>>>>> 4bded043d9640ea8bea64dc250ea795f5e49a553
-}
->>>>>>> 0f90496e8d8fd2142bc1aab7ee826ccd0aa004ec
