@@ -2,14 +2,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const questionList = document.querySelector('.question-list');
     const addQuestionBtn = document.querySelector('.add-question-btn');
     const quizLayout = document.querySelector('.quiz-layout');
-    const progressElement = document.querySelector('.progress');
-
     let currentPage = 1;
     let totalPages = 1; // 처음에는 1페이지로 시작
 
     // 페이지 수 업데이트 함수 (현재 페이지와 총 페이지 표시)
     function updatePageCount() {
-        progressElement.textContent = `${currentPage}/${totalPages}`;
+        const progressElements = document.querySelectorAll('.progress'); // 모든 페이지의 progress 영역을 찾아 업데이트
+        progressElements.forEach(el => {
+            el.textContent = `${currentPage}/${totalPages}`;
+        });
     }
 
     // 새로운 질문 페이지를 추가하는 함수
@@ -32,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
         newPage.innerHTML = `
             <div class="question-type">
                 <label>문제 유형</label>
-                <div class="progress">${currentPage}/${totalPages}</div> <!-- 여기서 잘못된 숫자가 발생할 수 있음 -->
+                <div class="progress">${totalPages}/${totalPages}</div> <!-- 각 페이지의 현재 상태를 일단 삽입 -->
                 <div class="type-btns">
                     <button class="type-btn">객관식</button>
                     <button class="type-btn">주관식</button>
@@ -71,9 +72,8 @@ document.addEventListener('DOMContentLoaded', function () {
         `;
         quizLayout.appendChild(newPage); // 새로운 페이지를 퀴즈 레이아웃에 추가
 
-        // 새로 추가된 페이지 번호로 이동
+        // 새로 추가된 페이지로 이동
         goToPage(totalPages);
-        updatePageCount(); // 페이지 수 업데이트
     }
 
     // 페이지 이동 함수
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (targetPage) {
             targetPage.style.display = 'block'; // 해당 페이지 표시
             currentPage = pageNumber; // 현재 페이지 업데이트
-            updatePageCount();
+            updatePageCount(); // 페이지 수 업데이트
         }
     }
 
