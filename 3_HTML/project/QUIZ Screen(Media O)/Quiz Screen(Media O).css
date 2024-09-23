@@ -5,16 +5,9 @@
 }
 
 html, body {
-<<<<<<< HEAD
     width: 1920px;;
     height: 1080px;
     margin: auto;
-=======
-    max-width: 90%;
-    max-height: 90%;
-    margin: auto;
-    margin-top: 2%;
->>>>>>> 7ff7a5df363bf749ccbfa73aa6a570cc8a63c4f3
     font-family: Arial, sans-serif;
 }
 

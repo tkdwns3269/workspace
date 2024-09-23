@@ -87,14 +87,11 @@ body {
 
 .bottom-buttons>button{
     background-color: #ffc578;
-<<<<<<< HEAD
-=======
     margin-bottom: 20px;
 }
 
 .button{
     background-color: #f0a94a;
->>>>>>> 7ff7a5df363bf749ccbfa73aa6a570cc8a63c4f3
     color: black;
     padding: 10px 20px;
     margin: 10px;
@@ -106,18 +103,11 @@ body {
 
 .button:hover {
     background-color: #ff9100;
-<<<<<<< HEAD
-    background-color: #ffa726;
-=======
->>>>>>> 7ff7a5df363bf749ccbfa73aa6a570cc8a63c4f3
 }
 
 .bottom-buttons {
     margin-top: 20px;
-<<<<<<< HEAD
-=======
     
->>>>>>> 7ff7a5df363bf749ccbfa73aa6a570cc8a63c4f3
 
 }
 
@@ -132,11 +122,5 @@ body {
 }
 
 .report-btn:hover {
-<<<<<<< HEAD
-    background-color: #ff1414;
-    background-color: #ff4d4d;
-}
-=======
     background-color: #ff1414 !important;
 }
->>>>>>> 7ff7a5df363bf749ccbfa73aa6a570cc8a63c4f3
