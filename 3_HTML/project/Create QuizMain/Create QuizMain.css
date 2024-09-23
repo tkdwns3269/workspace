@@ -10,12 +10,8 @@ body {
 }
 
 .container {
-<<<<<<< HEAD
-    width: 90%;
-=======
-    width: 100%;
->>>>>>> 4bded043d9640ea8bea64dc250ea795f5e49a553
-    height: 100vh; 
+    width: 1920px;;
+    height: 1080px; 
     margin: auto;
     padding: 0px;
     background-color: white;
@@ -81,16 +77,10 @@ textarea {
 
 .screen{
     background: #d9d9d9;
-<<<<<<< HEAD
     
     width: 60%;
     height: 350px;
     margin: auto;
-=======
-    width: 50%;
-    height: 400px;
-    margin-left: 25%;
->>>>>>> 4bded043d9640ea8bea64dc250ea795f5e49a553
 }
 
 .thumbnail{

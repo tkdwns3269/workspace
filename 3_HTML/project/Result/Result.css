@@ -76,7 +76,6 @@ body {
 }
 
 
-<<<<<<< HEAD
 .buttons>button{
     margin-bottom: 20px;
     background-color: #dcfa72;
@@ -88,14 +87,6 @@ body {
 
 .button{
     background-color: #ffc578;
-=======
-.buttons {
-    margin-bottom: 20px;
-}
-
-.button{
-    background-color: #f0a94a;
->>>>>>> 4bded043d9640ea8bea64dc250ea795f5e49a553
     color: black;
     padding: 10px 20px;
     margin: 10px;
@@ -106,19 +97,13 @@ body {
 }
 
 .button:hover {
-<<<<<<< HEAD
     background-color: #ff9100;
-=======
     background-color: #ffa726;
->>>>>>> 4bded043d9640ea8bea64dc250ea795f5e49a553
 }
 
 .bottom-buttons {
     margin-top: 20px;
-<<<<<<< HEAD
 
-=======
->>>>>>> 4bded043d9640ea8bea64dc250ea795f5e49a553
 }
 
 .report-btn {
@@ -132,9 +117,6 @@ body {
 }
 
 .report-btn:hover {
-<<<<<<< HEAD
     background-color: #ff1414;
-=======
     background-color: #ff4d4d;
->>>>>>> 4bded043d9640ea8bea64dc250ea795f5e49a553
 }

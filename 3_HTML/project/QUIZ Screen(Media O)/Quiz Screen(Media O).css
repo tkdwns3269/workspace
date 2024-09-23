@@ -5,15 +5,9 @@
 }
 
 html, body {
-<<<<<<< HEAD
-    max-width: 90%;
-    max-height: 90%;
+    width: 1920px;;
+    height: 1080px;
     margin: auto;
-    margin-top: 2%;
-=======
-    width: 100%;
-    height: 100%;
->>>>>>> 4bded043d9640ea8bea64dc250ea795f5e49a553
     font-family: Arial, sans-serif;
 }
 
@@ -94,11 +88,7 @@ body {
 }
 
 #progress-bar {
-<<<<<<< HEAD
     width: 1500px;
-=======
-    width: 1200px;
->>>>>>> 4bded043d9640ea8bea64dc250ea795f5e49a553
     background-color: #ddd;
     height: 40px;
     border-radius: 10px;
@@ -107,11 +97,7 @@ body {
 
 #progress-bar div {
     height: 100%;
-<<<<<<< HEAD
     width: 90%;
-=======
-    width: 50%;
->>>>>>> 4bded043d9640ea8bea64dc250ea795f5e49a553
     background-color: green;
     border-radius: 10px;
     text-align: center;

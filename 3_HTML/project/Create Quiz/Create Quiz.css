@@ -1,11 +1,12 @@
 * {
     margin: 0;
-    padding: 1;
+    padding: 0;
     box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+    width: 1920px;;
+    height: 1080px;
 }
 
 body {
@@ -16,15 +17,9 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-<<<<<<< HEAD
     width: 90%;
     height: 100vh; 
     margin: auto;
-=======
-    width: 100%;
-    height: 100vh; 
-    margin: 0;
->>>>>>> 4bded043d9640ea8bea64dc250ea795f5e49a553
     padding: 0;
     background-color: white;
     border: 2px solid #e67e22;
@@ -49,14 +44,9 @@ body {
 
 
 .progress {
-<<<<<<< HEAD
     text-align: end;
     font-size: 24px;
     color: #ff6600;
-=======
-    font-size: 24px;
-    color: #fff;
->>>>>>> 4bded043d9640ea8bea64dc250ea795f5e49a553
 }
 
 .quiz-layout {
