@@ -100,6 +100,8 @@ public class MemberDao {
 		
 		PreparedStatement pstmt = null;
 		String sql = prop.getProperty("updatePwdMember");
+<<<<<<< HEAD
+=======
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
@@ -156,6 +158,7 @@ public class MemberDao {
 		}
 		
 		return m;
+>>>>>>> 7e6b2de5258a03f2b52bf8e10e2579c7a6081b90
 	}
 	
 	public int deleteMember(Connection conn, String userId, String userPwd) {

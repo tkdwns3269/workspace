@@ -121,6 +121,8 @@
         </form>
     </div>
 	
+<<<<<<< HEAD
+=======
 	<!-- 회원탈퇴 Modal -->
 	<div class="modal" id="delete-member-modal">
 	  <div class="modal-dialog modal-dialog-centered">
@@ -151,6 +153,7 @@
 	  </div>
 	</div>
 	
+>>>>>>> 7e6b2de5258a03f2b52bf8e10e2579c7a6081b90
 	<!-- 비밀번호 변경 Modal -->
 	<div class="modal" id="update-pwd-modal">
 	  <div class="modal-dialog modal-dialog-centered">

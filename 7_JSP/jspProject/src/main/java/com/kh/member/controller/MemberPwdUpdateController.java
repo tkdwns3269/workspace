@@ -1,5 +1,13 @@
 package com.kh.member.controller;
 
+<<<<<<< HEAD
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+=======
 import java.io.IOException;
 
 import com.kh.member.model.vo.Member;
@@ -10,6 +18,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+>>>>>>> 7e6b2de5258a03f2b52bf8e10e2579c7a6081b90
 
 /**
  * Servlet implementation class MemberPwdUpdateController
@@ -35,6 +44,8 @@ public class MemberPwdUpdateController extends HttpServlet {
 		String userPwd = request.getParameter("userPwd");
 		String updatePwd = request.getParameter("updatePwd");
 		
+<<<<<<< HEAD
+=======
 		Member updateMember = new MemberService().updatePwdMember(userId, userPwd, updatePwd);
 		
 		if(updateMember == null) { //수정에 실패
@@ -47,6 +58,7 @@ public class MemberPwdUpdateController extends HttpServlet {
 			
 			response.sendRedirect(request.getContextPath() + "/myPage.me");
 		}
+>>>>>>> 7e6b2de5258a03f2b52bf8e10e2579c7a6081b90
 	}
 
 	/**
