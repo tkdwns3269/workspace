@@ -32,11 +32,6 @@ public class MemberService {
 		return result;
 	}
 	
-<<<<<<< HEAD
-	public void updatePwdMember(String userId, String userPwd, String updatePwd) {
-		Connection conn = getConnection();
-		new MemberDao().updatePwdMember(conn, )
-=======
 	public Member updatePwdMember(String userId, String userPwd, String updatePwd) {
 		Connection conn = getConnection();
 		int result = new MemberDao().updatePwdMember(conn, userId, userPwd, updatePwd);
@@ -51,7 +46,6 @@ public class MemberService {
 		}
 		
 		return updateMember;
->>>>>>> 7e6b2de5258a03f2b52bf8e10e2579c7a6081b90
 	}
 	
 	public int deleteMember(String userId, String userPwd) {
@@ -85,7 +79,6 @@ public class MemberService {
 		return updateMember;
 	}
 }
-
 
 
 
