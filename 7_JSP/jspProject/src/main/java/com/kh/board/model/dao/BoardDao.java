@@ -14,6 +14,7 @@ import java.util.Properties;
 import com.kh.board.model.vo.Attachment;
 import com.kh.board.model.vo.Board;
 import com.kh.board.model.vo.Category;
+import com.kh.board.model.vo.Reply;
 import com.kh.common.PageInfo;
 import com.kh.member.model.dao.MemberDao;
 
@@ -448,6 +449,59 @@ public class BoardDao {
 				at.setChangeName(rset.getString("change_name"));
 				at.setFilePath(rset.getString("file_path"));
 				list.add(at);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		
+		return list;
+	}
+	
+	public int insertReply(Connection conn, Reply r) {
+		int result = 0;
+		
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("insertReply");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, r.getReplyContent());
+			pstmt.setInt(2, r.getRefBoardNo());
+			pstmt.setInt(3, Integer.parseInt(r.getReplyWriter()));
+			
+			result = pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		
+		return result;
+	}
+	
+	public ArrayList<Reply> selectReplyList(Connection conn, int boardNo){
+		ArrayList<Reply> list = new ArrayList<>();
+		
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		String sql = prop.getProperty("selectReplyList");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, boardNo);
+			
+			rset = pstmt.executeQuery();
+			while(rset.next()) {
+				list.add(new Reply(
+							rset.getInt("reply_no"),
+							rset.getString("reply_content"),
+							rset.getString("user_id"),
+							rset.getString("create_date")
+						));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

@@ -1,9 +1,14 @@
 package com.kh.member.sevice;
 
-import static com.kh.common.JDBCTemplate.*;
+import static com.kh.common.JDBCTemplate.close;
+import static com.kh.common.JDBCTemplate.commit;
+import static com.kh.common.JDBCTemplate.getConnection;
+import static com.kh.common.JDBCTemplate.rollback;
 
 import java.sql.Connection;
 
+import com.kh.board.model.dao.BoardDao;
+import com.kh.board.model.vo.Reply;
 import com.kh.member.model.dao.MemberDao;
 import com.kh.member.model.vo.Member;
 
@@ -78,7 +83,16 @@ public class MemberService {
 		
 		return updateMember;
 	}
+	
+	public int idCheck(String checkId) {
+		Connection conn = getConnection();
+		int count = new MemberDao().idCheck(conn, checkId);
+		
+		close(conn);
+		return count;
+	}
 }
+
 
 
 
