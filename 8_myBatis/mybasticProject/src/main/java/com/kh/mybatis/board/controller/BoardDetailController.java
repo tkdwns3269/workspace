@@ -1,10 +1,12 @@
-package com.kh.mybatis.member.controller;
+package com.kh.mybatis.board.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
-import com.kh.mybatis.member.model.vo.Member;
-import com.kh.mybatis.member.service.MemberService;
-import com.kh.mybatis.member.service.MemberServiceImpl;
+import com.kh.mybatis.board.model.vo.Board;
+import com.kh.mybatis.board.model.vo.Reply;
+import com.kh.mybatis.board.service.BoardService;
+import com.kh.mybatis.board.service.BoardServiceImpl;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -12,15 +14,15 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class MemberLoginController
+ * Servlet implementation class BoardDetailController
  */
-public class MemberLoginController extends HttpServlet {
+public class BoardDetailController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public MemberLoginController() {
+    public BoardDetailController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,25 +31,23 @@ public class MemberLoginController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("UTF-8");
+		int boardNo = Integer.parseInt(request.getParameter("bno"));
+	
+		BoardService bService = new BoardServiceImpl();
+		//조회수 증가 + 상세조회
+		Board b = bService.increaseCount(boardNo);
 		
-		Member m = new Member();
-		m.setUserId(request.getParameter("userId"));
-		m.setUserPwd(request.getParameter("userPwd"));
-		
-		String path =request.getParameter("path");
-		
-		MemberService memberService = new MemberServiceImpl(); 
-		Member loginUser = memberService.loginMember(m);
-		
-		if(loginUser != null) {
-			request.getSession().setAttribute("loginUser", loginUser);
-			response.sendRedirect(request.getContextPath() + path);
+		if(b != null) {
+			ArrayList<Reply> list = bService.selectReplyList(boardNo);
+			
+			request.setAttribute("list", list);
+			request.setAttribute("b", b);
+			request.getRequestDispatcher("views/board/boardDetailView.jsp").forward(request, response);
 		} else {
-			request.setAttribute("errorMsg", "로그인 실패");
+			request.setAttribute("errorMsg", "상세조회 실패");
 			request.getRequestDispatcher("views/common/errorPage.jsp").forward(request, response);
-		}
 		
+		}
 	}
 
 	/**
