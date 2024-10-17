@@ -32,7 +32,7 @@ public class BoardServiceImpl implements BoardService{
 	public ArrayList<Board> selectList(PageInfo pi) {
 		
 		return boardDao.selectList(sqlSession, pi);
-	}
+	} 
 
 	@Override
 	public int increaseCount(int bno) {
@@ -64,9 +64,11 @@ public class BoardServiceImpl implements BoardService{
 	@Override
 	public int insertReply(Reply r) {
 		return boardDao.insertReply(sqlSession, r);
-		
 	}
-	
-	public ArrayList<Board> selectTopBoardList(Board )
+
+	@Override
+	public ArrayList<Board> selectTopBoardList() {
+		return boardDao.selectTopBoardList(sqlSession);
+	}
 
 }

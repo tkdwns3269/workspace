@@ -18,5 +18,4 @@ public class Reply {
 	private String replyWriter;
 	private String createDate;
 	private String status;
-	
 }
